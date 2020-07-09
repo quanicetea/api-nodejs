@@ -6,18 +6,18 @@ const bodyParser = require('body-parser');
 
 
 // Connect DB by mongoose
-// mongoose.set('useCreateIndex', true)
-// mongoose.connect('mongodb://localhost/nodejsapistarter',{
-//         useUnifiedTopology: true,
-//         useNewUrlParser: true,
+mongoose.set('useCreateIndex', true)
+mongoose.connect('mongodb://localhost/nodejsapistarter',{
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
        
-//     })
-//     .then(() => {
-//         console.log('✅Connect database successfully');
-//     })
-//     .catch((error) => {
-//         console.error(`Failed ${error}`)
-//     });
+    })
+    .then(() => {
+        console.log('✅Connect database successfully');
+    })
+    .catch((error) => {
+        console.error(`Failed ${error}`)
+    });
 
 const app = express();
 
@@ -55,5 +55,5 @@ app.use((err, req, res, next) => {
     })
 });
 // Start Server
-const port = app.get('port') || 3000;
+const port = app.get('port') || 3001;
 app.listen(port,()=>{ console.log(`🖥 Server is running at: ${'<http://127.0.0.1:'+port}>`)});
