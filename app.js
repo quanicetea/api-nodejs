@@ -6,18 +6,18 @@ const bodyParser = require('body-parser');
 
 
 // Connect DB by mongoose
-mongoose.set('useCreateIndex', true)
-mongoose.connect('mongodb://localhost/nodejsapistarter',{
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
+// mongoose.set('useCreateIndex', true)
+// mongoose.connect('mongodb://localhost/nodejsapistarter',{
+//         useUnifiedTopology: true,
+//         useNewUrlParser: true,
        
-    })
-    .then(() => {
-        console.log('✅Connect database successfully');
-    })
-    .catch((error) => {
-        console.error(`Failed ${error}`)
-    });
+//     })
+//     .then(() => {
+//         console.log('✅Connect database successfully');
+//     })
+//     .catch((error) => {
+//         console.error(`Failed ${error}`)
+//     });
 
 const app = express();
 
